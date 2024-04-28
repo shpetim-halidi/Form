@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login and Registration</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body> 
+ <div class="wrapper">   
+    <nav class="nav">
+        <div class="nav__logo">
+            <p>LOGO.</p>
+        </div>
+        <div class="nav__button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+            <button class="btn" id="applicationBtn" onclick="application()">Application</button>
+        </div>
+    </nav>
+    <div class="form__box">
+        <div class="login__container" id="login">
+            <div class="form__top">
+                <span>Dont have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                <header>Login</header>
+            </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Username or Email">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="Password">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="form__submit" value="Sign In">
+                </div>
+                <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check">Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Forgot Password?</a></label>
+                </div>
+            </div>
+        </div>
+        <div class="register__container" id="register">
+            <div class="form__top">
+                <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+                <header>Sign Up</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                <input type="text" class="input-field" placeholder="Firstname">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Lastname">
+                    <i class="bx bx-user"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Email">
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="form__submit" value="Register">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check">Remember Me</label>
+                </div>
+            <div class="two">
+                <label><a href="#">Terms & Condition</a></label>
+            </div>
+        </div>
+    </div>
+        <div class="application__container" id="application">
+            <div class="form__top">
+                <span>Be part of our team!!! <a href="#"></a></span>
+                <header>Application</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box-app">
+                    <input type="text" class="input-field-app" placeholder="Firstname">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box-app">
+                    <input type="text" class="input-field-app" placeholder="Lastname">
+                    <i class="bx bx-user"></i>
+                </div>
+            </div>
+            <div class="two-forms">
+                <div class="input-box-app">
+                    <input type="email" class="input-field-app" placeholder="Email">
+                    <i class="bx bx-envelope"></i>
+                </div>
+                <div class="input-box-app">
+                    <input type="tel" class="input-field-app" placeholder="Phone Number">
+                    <i class='bx bx-phone'></i>
+                </div>
+            </div>
+            <div class="two-forms">
+                <h4 class="app__gender">Gender?</h4>
+                <div class="app__checkbox">
+                    <input type="checkbox" id="gender">
+                    <label for="gender">Male</label>
+                </div>
+                <div class="app__checkbox">
+                    <input type="checkbox" id="gender">
+                    <label for="gender">Female</label>
+                </div>
+            </div>
+            <div class="two-forms">
+                <p class="app__birthday">Birthday?</p>
+                <div class="input-box-app">
+                    <input type="date" class="input-field-app" placeholder="Date of Birth">
+                    <i class="bx bx-cake"></i>
+                </div>
+            </div>
+            <div class="two-forms">
+                <div class="input-box-app">
+                    <input type="text" class="input-field-app" placeholder="Education">
+                    <i class="bx bxs-school"></i>
+                </div>
+                <div class="input-box-app">
+                    <input type="text" class="input-field-app" placeholder="Experience">
+                    <i class="bx bxs-school"></i>
+                </div>
+            </div>
+            <div class="input-box-app">
+                <input type="submit" class="form__submit" value="Apply">
+            </div>
+            <div class="two-col-app">
+                <div class="two">
+                    <label><a href="#">Terms & Condition</a></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var a = document.getElementById("loginBtn");
+    var b = document.getElementById("registerBtn");
+    var c = document.getElementById("applicationBtn");
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+    var z = document.getElementById("application");
+
+    function login() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        z.style.bottom = "-510px";
+        a.className += " white-btn";
+        b.className = "btn";
+        c.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+        z.style.opacity = 0;
+    }
+
+    function register() {
+        x.style.left = "-510px";
+        y.style.right = "0px";
+        z.style.bottom = "-510px";
+        a.className = "btn";
+        b.className += " white-btn";
+        c.className = "btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+        z.style.opacity = 0;
+    }
+
+    function application() {
+        x.style.left = "-510px";
+        y.style.right = "-510px";
+        z.style.bottom = "0px";
+        a.className = "btn";
+        b.className = "btn";
+        c.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 0;
+        z.style.opacity = 1;
+    } 
+</script>
+</body>
+</html>
